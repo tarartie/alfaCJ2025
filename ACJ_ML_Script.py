@@ -107,7 +107,7 @@ X_test = test_processed_df[test_processed_df['month_num'] == 6][features].copy()
 oof_preds = np.zeros((X.shape[0], num_classes))
 test_preds = np.zeros((X_test.shape[0], num_classes))
 
-# Обучение модели с использованием ассемблеи
+# Обучение модели с использованием ассемблеи кросс-валидации k-fold
 skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
 oof_preds = np.zeros((X.shape[0], num_classes))
